@@ -1,7 +1,50 @@
-body {
-    background-color: grey;
+
+  .container,
+  .overlay:before {
+    background: url(https://images.unsplash.com/photo-1542626832-c9534168a436?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat fixed 0 0 / cover;
+  }
+  
+  
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+    margin: 20px;
+  }
+  
+p {
+    line-height: 20px;
+    text-align: justify;
 }
 
-img {
-    border: 5px solid grey;
-}
+  .overlay {
+    max-height: 200px;
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    color: white;
+    font-family: 'Lato';
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    &:before {
+      content: '';
+      filter: blur(20px);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
